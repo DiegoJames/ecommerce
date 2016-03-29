@@ -1,0 +1,29 @@
+test: &default
+
+  # Credentials for REST APIs
+  client_id: ASIgkGUZ2ilxkXAg8FHB12Jb14bn6YQL1SH0DY258tGyV4n3ypeAtskGfyDr0ZXHdBHnusBVTH332o4v
+  client_secret: EGgHbkPZhyk4nYULwazhDxg9Ga40r8cTeThElUyox6bfi_2XRPrusQKLxQtSX_i2vLZLftnn5O_D_i7Y
+
+  # Mode can be 'live' or 'sandbox'
+  mode: sandbox
+
+  # Credentials for Classic APIs
+  app_id: APP-80W284485P519543T
+  username: jb-us-seller_api1.paypal.com
+  password: WX4WTU3S8MY44S7F
+  signature: AFcWxV21C7fd0v3bYYYRCpSSRl31A7yDhhsPUU2XhtMoZXsWHFxu-RWy
+  # # With Certificate
+  # cert_path: "config/cert_key.pem"
+  sandbox_email_address: daoorellana@gmail.com
+
+  # # IP Address
+  # ip_address: 127.0.0.1
+  # # HTTP Proxy
+  # http_proxy: http://proxy-ipaddress:3129/
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  mode: live
