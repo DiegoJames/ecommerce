@@ -52,7 +52,7 @@ gem 'rake', '10.2.2'
 # gem 'capistrano-rails', group: :development
 # 
 group :production do 
-  gem 'mysql2','~>0.3.9'
+  gem "mysql2", "~> 0.3.9"
 end
 
 group :development, :test do
