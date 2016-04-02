@@ -12,12 +12,14 @@
           =link_to "", class:"right-space white-text" do
             %i.mdi-action-alarm 
             Descuentos
+          =link_to "Cerrar sesión",destroy_user_session_path,method: :delete ,class:"right-space white-text"
+            
       %li.col-md-4.inline-block.text-center
         =image_tag "tiendus.png",height:"25px"
       %li.col-md-4.inline-block.tall-padding.white-text
         =link_to carrito_path,class:"white-text" do 
           %i.mdi-action-shopping-cart
-          Mi carrtio
+          Mi carrito
           (
           = @shopping_cart.products.count
           )
