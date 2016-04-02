@@ -4,7 +4,7 @@ class InShoppingCartsController < ApplicationController
     in_shopping_cart = InShoppingCart.new(product_id: params[:product_id],
                                     shopping_cart: @shopping_cart)
     if in_shopping_cart.save
-      redirect_to "/carrito", notice: "Guardamos el producto en tu carrito"
+      redirect_to "carrito_path", notice: "Guardamos el producto en tu carrito"
     else
       redirect_to producto_path(id: params[:product_id]), notice: "No pudimos agregar al carrito, intenta de nuevo"
     end

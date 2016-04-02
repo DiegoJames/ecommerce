@@ -8,10 +8,10 @@
     %tbody
       -@shopping_cart.in_shopping_carts.each do |i_sh|
         -product = i_sh.product
-        %tr{id: "#{i_sh.product.id}"}
+        %tr{id: "#{product.id}"}
           %td= product.name
           %td= product.pricing
-          %td Eliminar
+          %td= link_to "Eliminar",i_sh,method: :delete
   .top-space.large-padding.text-center#payment_form
     %p.medium
       %strong
